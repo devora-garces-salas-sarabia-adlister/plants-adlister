@@ -11,11 +11,12 @@
     <title>Show Ads</title>
 </head>
 <body>
+<h1>Howdy</h1>
 <div class="col-md-6">
     <h2><a>${ad.title}</a> </h2>
     <p>${ad.description}</p>
     <br>
-    <p>${}</p>
+<%--    <p>${}</p>--%>
 </div>
 </body>
 </html>

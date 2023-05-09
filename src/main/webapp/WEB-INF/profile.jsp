@@ -10,6 +10,8 @@
 
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
+
+        <button> <a href="/ads">View all ads</a></button>
     </div>
 
 </body>

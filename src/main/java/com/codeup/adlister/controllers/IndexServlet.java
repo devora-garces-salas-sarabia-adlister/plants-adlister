@@ -14,9 +14,7 @@ import java.io.IOException;
 public class IndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Long id = Long.valueOf(request.getParameter("id"));
-        System.out.println(id);
-        request.setAttribute("index", DaoFactory.getAdsDao().all());
-        request.getRequestDispatcher("/WEB-INF/showAd.jsp").forward(request, response);
-        //set the set attribute it to the ad object from dao
+        request.setAttribute("ad", DaoFactory.getAdsDao().findAd(id));
+        request.getRequestDispatcher("/WEB-INF/ads/showAd.jsp").forward(request, response);
     }
 }
