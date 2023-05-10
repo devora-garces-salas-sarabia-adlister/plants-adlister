@@ -32,7 +32,7 @@
             <p>${ad.description}</p>
         </div>
         <button>Edit</button>
-        <button>Delete</button>
+        <a class="btn" href="/delete?id=${ad.id}">Delete</a>
     </c:forEach>
 </body>
 </html>

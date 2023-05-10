@@ -14,7 +14,10 @@ import java.io.IOException;
 public class DeleteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Long id = Long.valueOf(request.getParameter("id"));
-        request.setAttribute("ad", DaoFactory.getAdsDao().findAd(id));
+        DaoFactory.getAdsDao().deleteAdPost(id);
+        request.getRequestDispatcher("/WEB-INF/deletead.jsp").forward(request, response);
+
+
 
 
 

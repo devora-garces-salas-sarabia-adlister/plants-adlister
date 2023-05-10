@@ -11,17 +11,16 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Are you sure you want to delete this Ad?</h1>
-<%--<form action="/ads/delete" method="post">--%>
-<%--    <div class="form-group">--%>
-<%--        <label for="title">Title</label>--%>
-<%--        <input id="title" name="title" class="form-control" type="text">--%>
-<%--    </div>--%>
-<%--    <div class="form-group">--%>
-<%--        <label for="description">Description</label>--%>
-<%--        <textarea id="description" name="description" class="form-control" type="text"></textarea>--%>
-<%--    </div>--%>
-<%--    <input type="submit" class="btn btn-block btn-primary">--%>
-<%--</form>--%>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/ads">Adlister</a>
+        </div>
+        <button><a href="/ads">Go back to all ads</a></button>
+        <button><a href="/logout">Logout</a></button>
+    </div><!-- /.navbar-collapse -->
+</nav>
+<h1>Ad was deleted</h1>
 </body>
 </html>

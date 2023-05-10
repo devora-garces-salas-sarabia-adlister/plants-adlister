@@ -107,12 +107,11 @@ public class MySQLAdsDao implements Ads {
     public List<Ad> findByUserId(Long userId) {
 
         try {
-            String sql = "SELECT * FROM ads WHERE user_id LIKE ?";
+            String sql = "SELECT * FROM ads WHERE user_id = ?";
             PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
             stmt.setLong(1, userId);
             ResultSet rs = stmt.executeQuery();
-            System.out.println(userId);
             return createAdsFromResults(rs);
 
         } catch (SQLException e) {
@@ -120,15 +119,14 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    public Ad deleteAdPost(Long adId) {
+    public void deleteAdPost(Long adId) {
         try {
-            String sql = "DELETE FROM ads WHERE id LIKE ?";
-            PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            String sql = "DELETE FROM ads WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(sql);
 
             stmt.setLong(1, adId);
-            ResultSet rs = stmt.executeQuery();
+            stmt.execute();
             System.out.println(adId);
-            return extractAd(rs);
 
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all ads.", e);
