@@ -7,7 +7,26 @@
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/ads">Adlister</a>
+        </div>
+        <div>
+            <label for="search"></label>
+            <form class="d-flex" role="search" method="GET" action="/search">
+                <input class="form-control me-2" type="search" placeholder="Search" name="search" id="search" aria-label="Search" required>
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/login">Login</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
 
 <div class="container">
     <h1>Here Are all the ads!</h1>
