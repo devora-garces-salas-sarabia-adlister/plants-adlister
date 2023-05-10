@@ -11,4 +11,6 @@ public interface Ads {
     Long insert(Ad ad);
     Ad findAd(Long id);
     List<Ad> findByTitle(String title);
+    List<Ad> findByUserId(Long user_id);
+    Ad deleteAdPost(Long adId);
 }

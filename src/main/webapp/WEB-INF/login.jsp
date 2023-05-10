@@ -21,5 +21,6 @@
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
     </div>
+    <button><a href="/register">Sign-up</a></button>
 </body>
 </html>

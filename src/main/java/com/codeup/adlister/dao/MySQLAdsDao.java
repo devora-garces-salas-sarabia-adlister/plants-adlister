@@ -103,4 +103,36 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
+
+    public List<Ad> findByUserId(Long userId) {
+
+        try {
+            String sql = "SELECT * FROM ads WHERE user_id LIKE ?";
+            PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+
+            stmt.setLong(1, userId);
+            ResultSet rs = stmt.executeQuery();
+            System.out.println(userId);
+            return createAdsFromResults(rs);
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
+    public Ad deleteAdPost(Long adId) {
+        try {
+            String sql = "DELETE FROM ads WHERE id LIKE ?";
+            PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+
+            stmt.setLong(1, adId);
+            ResultSet rs = stmt.executeQuery();
+            System.out.println(adId);
+            return extractAd(rs);
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
 }
