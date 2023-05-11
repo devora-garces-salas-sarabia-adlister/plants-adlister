@@ -11,6 +11,31 @@
     <title>Title</title>
 </head>
 <body>
-
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/updateAd" method="POST">
+                <div class="modal-body">
+                    <label for="title">Title</label>
+                    <input id="title" name="title" class="form-control" type="text" value="${ad.title}">
+                </div>
+                <div class="modal-body">
+                    <label for="description">Description</label>
+                    <input id="description" name="description" class="form-control" type="text"
+                           value="${ad.description}">
+                </div>
+                <input value="${ad.id}" type="hidden" name="id">
+                <div class="modal-footer">
+                    <a href="/profile" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
+                    <button type="submit" class="btn btn-primary">Make Edit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -22,7 +22,7 @@
                 <h5 class="card-title"><a href="/ads/view?id=${ad.id}" >${ad.title}</a></h5>
                 <p class="card-text">${ad.description}</p>
                 <button><a class="btn" href="/delete?id=${ad.id}">Delete</a></button>
-                <button><a class="btn" href="">Edit</a></button>
+                <button><a class="btn" href="/updateAd?id=${ad.id}">Edit</a></button>
             </div>
 
         </c:forEach>

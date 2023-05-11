@@ -16,10 +16,5 @@ public class DeleteServlet extends HttpServlet {
         Long id = Long.valueOf(request.getParameter("id"));
         DaoFactory.getAdsDao().deleteAdPost(id);
         request.getRequestDispatcher("/WEB-INF/deletead.jsp").forward(request, response);
-
-
-
-
-
     }
 }

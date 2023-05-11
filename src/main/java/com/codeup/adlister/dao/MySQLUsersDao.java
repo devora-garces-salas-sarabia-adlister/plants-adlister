@@ -63,4 +63,21 @@ public class MySQLUsersDao implements Users {
         );
     }
 
+    public void updateUserProfile(Long userId, String username, String password, String email){
+        try{
+            String sql = "UPDATE user SET username = ?, password = ?, email = ? WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(sql);
+
+
+            stmt.setString(1, username);
+            stmt.setString(2, password);
+            stmt.setString(3, email);
+            stmt.setLong(4, userId);
+            stmt.execute();
+            System.out.println(userId);
+        }catch (SQLException e){
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
 }

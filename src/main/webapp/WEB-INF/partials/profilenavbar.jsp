@@ -12,6 +12,7 @@
         <div class="navbar-header">
             <a class="navbar-brand text-primary" href="/ads">Plant-lister</a>
         </div>
+        <button> <a href="/ads/create">Update Profile</a></button>
         <button><a href="/logout">Logout</a></button>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

@@ -133,4 +133,20 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    public void updateAdPost(Long adId, String title, String description){
+        try{
+            String sql = "UPDATE ads SET title = ?, description = ? WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(sql);
+
+
+            stmt.setString(1, title);
+            stmt.setString(2, description);
+            stmt.setLong(3, adId);
+            stmt.execute();
+            System.out.println(adId);
+        }catch (SQLException e){
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
 }

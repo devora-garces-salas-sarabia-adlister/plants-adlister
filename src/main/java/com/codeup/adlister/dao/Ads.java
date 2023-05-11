@@ -13,4 +13,5 @@ public interface Ads {
     List<Ad> findByTitle(String title);
     List<Ad> findByUserId(Long user_id);
     void deleteAdPost(Long adId);
+    void updateAdPost(Long adId, String title, String description);
 }
