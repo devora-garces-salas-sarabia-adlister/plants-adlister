@@ -18,7 +18,7 @@ public class DeleteUsersServlet extends HttpServlet{
         }else{
             System.out.println(username);
             DaoFactory.getUsersDao().deleteUserAcc(username);
-            request.getSession().setAttribute("username", null);
+            request.getSession().invalidate();
             response.sendRedirect("/homepage");
         }
     }
