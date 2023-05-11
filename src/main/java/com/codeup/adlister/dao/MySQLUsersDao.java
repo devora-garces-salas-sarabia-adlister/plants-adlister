@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.User;
+import com.codeup.adlister.util.Password;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
@@ -65,17 +66,33 @@ public class MySQLUsersDao implements Users {
 
     public void updateUserProfile(Long userId, String username, String password, String email){
         try{
-            String sql = "UPDATE user SET username = ?, password = ?, email = ? WHERE id = ?";
+            String sql = "UPDATE users SET username = ?, password = ?, email = ? WHERE id = ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
 
+            String hash = Password.hash(password);
 
             stmt.setString(1, username);
-            stmt.setString(2, password);
+            stmt.setString(2, hash);
             stmt.setString(3, email);
             stmt.setLong(4, userId);
+
             stmt.execute();
-            System.out.println(userId);
         }catch (SQLException e){
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
+    public void deleteUserAcc(String username) {
+        try {
+            String sql = "DELETE FROM users WHERE username = ?";
+            PreparedStatement stmt = connection.prepareStatement(sql);
+
+            stmt.setString(1, username);
+            System.out.println(username);
+            stmt.execute();
+
+
+        } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
