@@ -8,33 +8,19 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/ads">Adlister</a>
-        </div>
-        <div>
-            <label for="search"></label>
-            <form class="d-flex" role="search" method="GET" action="/search">
-                <input class="form-control me-2" type="search" placeholder="Search" name="search" id="search" aria-label="Search" required>
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-           <a href="/logout">Logout</a>
-        </ul>
-    </div><!-- /.navbar-collapse -->
-</nav>
+<jsp:include page="/WEB-INF/partials/indexNavbar.jsp" />
 
 <div class="container">
     <h1>Here Are all the ads!</h1>
-
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <h2><a href="/ads/view?id=${ad.id}">${ad.title}</a></h2>
-            <p>${ad.description}</p>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <div class="col-md-6">
+             <h5 class="card-title"><a href="/ads/view?id=${ad.id}" >${ad.title}</a></h5>
+             <p class="card-text">${ad.description}</p>
+            </div>
         </div>
+    </div>
     </c:forEach>
-</div>
 </body>
 </html>
