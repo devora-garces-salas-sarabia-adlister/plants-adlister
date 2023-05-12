@@ -18,47 +18,48 @@ public class RegisterServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
 
+
         // validate input
         boolean inputHasErrors = username.isEmpty()
-            || email.isEmpty()
-            || password.isEmpty()
+            || email == null
+            || password == null
             || (! password.equals(passwordConfirmation))
             || DaoFactory.getUsersDao().findByUsername(username) != null
             || DaoFactory.getUsersDao().findByEmail(email) != null;
 
+        System.out.println("inputHasErrors = " + inputHasErrors);
 
         if (inputHasErrors) {
             if (username.isEmpty()) {
                 request.setAttribute("usernameError", "Please enter a username");
             } else if (DaoFactory.getUsersDao().findByUsername(username) != null) {
+                System.out.println("hello");
                 request.setAttribute("usernameError", "Username already exists");
             }
             if (email.isEmpty()) {
                 request.setAttribute("emailError", "Please enter an email address");
             } else if (DaoFactory.getUsersDao().findByEmail(email) != null) {
+                System.out.println("hello");
                 request.setAttribute("emailError", "Email already exists");
             }
             if (password.isEmpty()) {
                 request.setAttribute("passwordError", "Please enter a password");
-            } else if (!password.equals(passwordConfirmation)) {
+            } else if (!(password.equals(passwordConfirmation))) {
                 request.setAttribute("passwordError", "Passwords do not match");
             }
             request.setAttribute("usernameInput", username);
             request.setAttribute("emailInput", email);
             request.setAttribute("reloaded", "true");
-            try {
-                request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
-            } catch (ServletException e) {
-                throw new RuntimeException(e);
-            }
-            return;
-        }
+
+                request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
+
+        } else {
 
 
         // create and save a new user
@@ -72,6 +73,7 @@ public class RegisterServlet extends HttpServlet {
 
         DaoFactory.getUsersDao().insert(user);
         response.sendRedirect("/login");
+    }
 
 }
 }

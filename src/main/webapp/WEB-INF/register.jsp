@@ -14,12 +14,12 @@
             <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" value="<c:out value="${usernameInput}"></c:out>" name="username" class="form-control" type="text" required>
-                <span <c:out value="${usernameError}"></c:out>></span>
+                <span>${usernameError}</span>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input id="email" name="email" value="<c:out value="${emailInput}"></c:out>" class="form-control" type="text" required>
-                <span <c:out value="${emailError}"></c:out>></span>
+                <span>${emailError}</span>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
@@ -27,9 +27,9 @@
             </div>
             <div class="form-group">
                 <label for="confirm_password">Confirm Password</label>
-                <input id="confirm_password" name="confirm_password" class="form-control" type="password">
+                <input id="confirm_password" name="confirm_password" class="form-control" type="password" required>
             </div>
-            <p value="${passwordError}"></p>
+            <p>${passwordError}</p>
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
