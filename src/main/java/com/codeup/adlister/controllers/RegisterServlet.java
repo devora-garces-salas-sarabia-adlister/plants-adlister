@@ -28,12 +28,38 @@ public class RegisterServlet extends HttpServlet {
         boolean inputHasErrors = username.isEmpty()
             || email.isEmpty()
             || password.isEmpty()
-            || (! password.equals(passwordConfirmation));
+            || (! password.equals(passwordConfirmation))
+            || DaoFactory.getUsersDao().findByUsername(username) != null
+            || DaoFactory.getUsersDao().findByEmail(email) != null;
+
 
         if (inputHasErrors) {
-            response.sendRedirect("/register");
+            if (username.isEmpty()) {
+                request.setAttribute("usernameError", "Please enter a username");
+            } else if (DaoFactory.getUsersDao().findByUsername(username) != null) {
+                request.setAttribute("usernameError", "Username already exists");
+            }
+            if (email.isEmpty()) {
+                request.setAttribute("emailError", "Please enter an email address");
+            } else if (DaoFactory.getUsersDao().findByEmail(email) != null) {
+                request.setAttribute("emailError", "Email already exists");
+            }
+            if (password.isEmpty()) {
+                request.setAttribute("passwordError", "Please enter a password");
+            } else if (!password.equals(passwordConfirmation)) {
+                request.setAttribute("passwordError", "Passwords do not match");
+            }
+            request.setAttribute("usernameInput", username);
+            request.setAttribute("emailInput", email);
+            request.setAttribute("reloaded", "true");
+            try {
+                request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+            } catch (ServletException e) {
+                throw new RuntimeException(e);
+            }
             return;
         }
+
 
         // create and save a new user
         User user = new User(username, email, password);
@@ -46,5 +72,6 @@ public class RegisterServlet extends HttpServlet {
 
         DaoFactory.getUsersDao().insert(user);
         response.sendRedirect("/login");
-    }
+
+}
 }
