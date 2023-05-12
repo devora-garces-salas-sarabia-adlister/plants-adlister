@@ -7,11 +7,16 @@
     </jsp:include>
 </head>
 <body>
+<video id="background-video" autoplay loop muted >
+  <source src="/videos/homepage-bg.mp4" type="video/mp4">
+</video>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1>Welcome to the Plant-lister!</h1>
-        <button><a href="/login">Login</a></button>
-        <button><a href="/register">Sign-up</a></button>
+        <div class="row">
+            <h1 class="col-12 welcome-header">Welcome to the Plant-lister!</h1>
+            <button class="col-6 btn btn-yellow"><a href="/login">Login</a></button>
+            <button class="col-6 btn btn-yellow"><a href="/register">Sign-up</a></button>
+        </div>
     </div>
 </body>
 </html>
