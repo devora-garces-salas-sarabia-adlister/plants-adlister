@@ -12,14 +12,14 @@
     <div class="card">
     <div class="container login-box">
 
-        <h1>Please Login</h1>
+        <h1 class="title-font">Please Login</h1>
         <form action="/login" method="POST">
             <div class="form-group">
-                <label for="username">Username</label>
+                <label class="title-font" for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
+                <label class="title-font" for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password">
             </div>
             <input type="submit" class="btn btn-secondary btn-block submit" value="Login">
