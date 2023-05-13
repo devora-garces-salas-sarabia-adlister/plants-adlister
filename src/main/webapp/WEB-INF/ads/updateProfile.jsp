@@ -33,6 +33,7 @@
         <input value="${user.id}" type="hidden" name="id">
         <input type="submit" class="btn btn-primary btn-block">
         <button><a class="btn" href="/deleteUser?username=${user.username}">Delete</a></button>
+        <button><a class="btn" href="/profile">Cancel</a></button>
     </form>
 </div>
 </body>
