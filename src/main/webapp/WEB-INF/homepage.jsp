@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <jsp:include page="/WEB-INF/partials/head.jsp">
+    <jsp:include page="/WEB-INF/partials/head2.jsp">
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
 </head>
@@ -14,8 +14,10 @@
     <div class="container">
         <div class="row">
             <h1 class="col-12 welcome-header">Welcome to the Plant-lister!</h1>
-            <button class="col-6 btn btn-yellow"><a href="/login">Login</a></button>
-            <button class="col-6 btn btn-yellow"><a href="/register">Sign-up</a></button>
+            <div class="d-flex justify-content-center">
+            <button class="col-4 me-2 btn-yellow"><a href="/login">Login</a></button>
+            <button class="col-4 btn-yellow"><a href="/register">Sign-up</a></button>
+            </div>
         </div>
     </div>
 </body>

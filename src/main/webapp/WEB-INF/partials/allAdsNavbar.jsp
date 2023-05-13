@@ -10,7 +10,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="/ads">Adlister</a>
+      <a class="navbar-brand" href="/ads">Plantlister</a>
     </div>
     <button><a href="/profile">Back to Profile</a></button>
     <button><a href="/logout">Logout</a></button>

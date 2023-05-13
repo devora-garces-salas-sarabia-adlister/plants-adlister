@@ -31,7 +31,15 @@
 
 .btn-yellow{
     display: flex;
+    justify-content: center;
     align-content: center;
-    color: #F8F991;
-    padding: 5px;
+    background-color: #F8F991;
+    padding: 5px 5px;
+    border-radius: 7px;
+    border-color: #F8F991;
+    text-decoration: none;
+}
+
+.btn-yellow a{
+    color:#3D315B !important;
 }

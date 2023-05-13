@@ -10,7 +10,7 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand text-primary" href="/ads">Plant-lister</a>
+      <a class="navbar-brand text-primary" href="/ads">Plantlister</a>
     </div>
     <button class="btn"><a href="/login">Already a USER? Login</a></button>
   </div>
