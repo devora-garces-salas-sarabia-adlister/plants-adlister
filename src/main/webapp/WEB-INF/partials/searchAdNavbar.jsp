@@ -6,13 +6,16 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<head>
+  <link rel="stylesheet" href="/css/showAd.css">
+</head>
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <div class="container-fluid row">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand text-primary" href="/ads">Plantlister</a>
+    <div class="navbar-header col-8">
+      <a class="navbar-brand text" href="/ads">Plantlister</a>
     </div>
-      <button><a href="/ads">Back to Ads</a></button>
-      <button><a href="/logout">Logout</a></button>
+      <button class="btn col-2"><a href="/ads" class="text">Back to Ads</a></button>
+      <button class="btn col-2"><a href="/logout" class="text">Logout</a></button>
   </div><!-- /.navbar-collapse -->
 </nav>
