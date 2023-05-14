@@ -1,0 +1,66 @@
+body {
+    background-color: #444b6e;
+}
+
+.card-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    padding: 2em;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 75%;
+    height: 30vh;
+    background-color: #9ab87a;
+}
+h5{
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+h5>a{
+    color: #F8F991;
+    font-family: 'Pathway Extreme', sans-serif;
+    font-size: xx-large;
+}
+.card-body{
+    font-family: 'Pathway Extreme', sans-serif;
+}
+p{
+    color: #3D315B;
+}
+
+@media(max-width: 768px){
+    .card-body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 75%;
+        height: 70vh;
+    }
+    h5>a{
+        color: #F8F991;
+        font-family: 'Pathway Extreme', sans-serif;
+        font-size: xx-large;
+    }
+
+
+}
+@media(min-width: 769px){
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        font-size: small;
+    }
+}

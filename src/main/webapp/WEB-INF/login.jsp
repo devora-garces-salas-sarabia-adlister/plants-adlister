@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/loginnavbar.jsp"/>
+<jsp:include page="/WEB-INF/partials/loginNavbar.jsp"/>
 <img src="/img/succulents.jpg" id="background-img">
 <div class="container">
     <h1 class="title-font">Please Login</h1>
