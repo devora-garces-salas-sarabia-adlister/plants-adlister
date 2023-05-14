@@ -19,7 +19,7 @@
   <div class="card" style="width: 18rem;">
     <div class="card-body">
       <div class="col-md-6">
-        <h5 class="card-title"><a href="/ads/view?id=${ad.id}" >${ad.title}</a></h5>
+        <h5 class="card-title"><a href="/ads/view?id=${ad.id}">${ad.title}</a></h5>
         <p class="card-text">${ad.description}</p>
       </div>
     </div>

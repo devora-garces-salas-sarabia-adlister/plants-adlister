@@ -10,17 +10,16 @@
 <head>
     <title>Show Ads</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/newShowAd.css">
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/searchAdNavbar.jsp"/>
 <img id="background-imgs" src="/img/grassy.jpg">
-<div class="card-box">
-    <div class="card" style="width: 18rem;">
-        <div class="card-body px-lg-5 pb-4 d-flex justify-content-center align-items-center">
-            <div class="col-md-6">
+<div class="container4">
+    <div class="container3">
+        <div class="container2">
             <h5 class="card-title py-4"><a href="/ads/view?id=${ad.id}" >${ad.title}</a></h5>
             <p class="card-text">${ad.description}</p>
-            </div>
         </div>
     </div>
 </div>
