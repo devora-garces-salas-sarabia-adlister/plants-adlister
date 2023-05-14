@@ -31,7 +31,7 @@
         <input value="${ad.id}" type="hidden" name="id">
         <div>
             <button type="submit" class="btn btn-secondary btn-block submit btn-text">Make Edit</button>
-            <button href="/profile" type="button" class="btn btn-secondary btn-block submit btn-text" data-bs-dismiss="modal">Close</button>
+            <button href="/profile" type="button" class="btn btn-secondary btn-block submit btn-text" data-bs-dismiss="modal">Cancel</button>
         </div>
     </form>
 </div>

@@ -2,27 +2,30 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <jsp:include page="/WEB-INF/partials/head.jsp">
+    <jsp:include page="/WEB-INF/partials/headerProfile.jsp">
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
-    <link rel="stylesheet" href="/css/profile.css">
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/profilenavbar.jsp" />
-
-    <div class="">
-        <h1>Welcome, ${sessionScope.user.username}!</h1>
-        <button> <a href="/ads">View all ads</a></button>
-        <button> <a href="/ads/create">Create an Ad</a></button>
+<img src="/img/tree-bg.jpg" id="background-imgs">
+<div class="d-flex justify-content-center align-items-center">
+    <div class="my-3">
+            <h1 class="text-orange">Welcome, ${sessionScope.user.username}!</h1>
+        <div class="d-flex justify-content-center align-items-center">
+            <button class="btn btn-secondary btn-block submit text-light me-2"> <a href="/ads" class="text-light">View all ads</a></button>
+            <button class="btn btn-secondary btn-block submit text-light"> <a href="/ads/create" class="text-light">Create an Ad</a></button>
+        </div>
     </div>
+</div>
     <div class="container4">
             <c:forEach var="ad" items="${ad}">
                 <div class="container3">
                     <div class="container2">
                             <h5 class=""><a href="/ads/view?id=${ad.id}" >${ad.title}</a></h5>
                             <p class="">${ad.description}</p>
-                            <button><a class="" href="/delete?id=${ad.id}">Delete</a></button>
-                            <button><a class="" href="/updateAd?id=${ad.id}">Edit</a></button>
+                            <button class="btn btn-secondary btn-block submit"><a href="/delete?id=${ad.id}" class="text-light">Delete</a></button>
+                            <button class="btn btn-secondary btn-block submit"><a href="/updateAd?id=${ad.id}" class="text-light">Edit</a></button>
                     </div>
                 </div>
             </c:forEach>
