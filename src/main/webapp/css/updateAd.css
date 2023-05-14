@@ -1,0 +1,37 @@
+@media(max-width: 768px){
+    .container{
+        max-width: 700px;
+    }
+}
+
+.container {
+    max-width: 500px;
+    margin: 100px auto;
+    color: #ccc0c4;
+    background-color: rgba(61, 49, 91, 0.75);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#background-img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.submit {
+    margin-top: 1em;
+}
+.form-group{
+    margin-top: 1em;
+}
+.title-font{
+    font-family: 'Pathway Extreme', sans-serif;
+}
