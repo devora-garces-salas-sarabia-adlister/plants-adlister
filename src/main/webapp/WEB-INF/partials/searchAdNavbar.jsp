@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
   <link rel="stylesheet" href="/css/showAd.css">
+    <link rel="stylesheet" href="/css/searchAdNav.css">
 </head>
 <nav class="navbar navbar-default">
   <div class="container-fluid row">

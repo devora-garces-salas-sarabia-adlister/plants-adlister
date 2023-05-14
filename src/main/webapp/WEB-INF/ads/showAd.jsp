@@ -13,15 +13,17 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/searchAdNavbar.jsp"/>
+<img id="background-imgs" src="/img/grassy.jpg">
+<div class="card-box">
     <div class="card" style="width: 18rem;">
-        <div class="card-body">
+        <div class="card-body px-lg-5 pb-4 d-flex justify-content-center align-items-center">
             <div class="col-md-6">
-            <h5 class="card-title"><a href="/ads/view?id=${ad.id}" >${ad.title}</a></h5>
+            <h5 class="card-title py-4"><a href="/ads/view?id=${ad.id}" >${ad.title}</a></h5>
             <p class="card-text">${ad.description}</p>
             </div>
         </div>
     </div>
-
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
