@@ -10,13 +10,11 @@
     z-index: -1;
 }
 
-
-
 .container2 {
     width: 250px;
     margin: 25px;
     color: #151313;
-    background-color: rgba(221, 224, 221, 0.75);
+    background-color: rgba(170, 176, 217, 0.75);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 10px;
@@ -55,3 +53,13 @@
     margin: 2em;
 }
 
+h1{
+    text-align: center;
+    margin: 20px;
+    color: white;
+
+}
+
+a{
+    color: #405e14 !important;
+}

@@ -37,8 +37,8 @@
         </div>
         <input value="${user.id}" type="hidden" name="id">
         <input type="submit" class="btn btn-secondary btn-outline-light btn-block submit">
-        <button class="btn btn-secondary btn-outline-light btn-block submit btn-text"><a href="/deleteUser?username=${user.username}">Delete User</a></button>
-        <button class="btn btn-secondary btn-outline-light btn-block submit btn-text"><a href="/profile">Cancel</a></button>
+        <button class="btn btn-secondary btn-outline-light btn-block submit btn-text"><a href="/deleteUser?username=${user.username}" class="text-reset red-text text-decoration-none">Delete User</a></button>
+        <button class="btn btn-secondary btn-outline-light btn-block submit btn-text"><a href="/profile" class="text-reset txt-white text-decoration-none">Cancel</a></button>
     </form>
 </div>
 </body>

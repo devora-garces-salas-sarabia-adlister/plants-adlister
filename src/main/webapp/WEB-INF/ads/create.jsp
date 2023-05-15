@@ -20,7 +20,7 @@
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
             <input type="submit" class="btn btn-block btn-secondary btn-outline-light mt-3 me-2">
-            <button type="button" class="btn btn-secondary btn-block submit btn-text btn-outline-light" data-bs-dismiss="modal"><a href="/profile" class="text-light">Cancel</a></button>
+            <button type="button" class="btn btn-secondary btn-block submit btn-text btn-outline-light" data-bs-dismiss="modal"><a href="/profile" class="text-reset txt-white text-decoration-none">Cancel</a></button>
         </form>
     </div>
 </body>
