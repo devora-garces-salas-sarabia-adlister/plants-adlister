@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/css/allAdsNav.css">
 </head>
 <div>
-  <nav class="navbar navbar-default row">
+  <nav class="navbar navbar-default row gx-0">
     <div class="container-fluid">
       <div class="navbar-header col-2">
         <a class="navbar-brand text ps-3">Plantlister</a>
@@ -23,7 +23,7 @@
         </form>
       </div>
       <button class="btn col-1"><a href="/profile" class="text">Back to Profile</a></button>
-      <button class="btn col-1"><a href="/logout" class="text">Logout</a></button>
+      <button class="btn col-1 me-3"><a href="/logout" class="text">Logout</a></button>
       </ul>
     </div>
   </nav>

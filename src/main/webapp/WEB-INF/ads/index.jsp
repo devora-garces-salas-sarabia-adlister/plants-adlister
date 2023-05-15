@@ -16,7 +16,7 @@
     <c:forEach var="ad" items="${ads}">
         <div class="container3">
             <div class="container2">
-             <h5 class="card-title"><a href="/ads/view?id=${ad.id}">${ad.title}</a></h5>
+             <h5 class="card-title"><a href="/ads/view?id=${ad.id}" class="text-decoration-none">${ad.title}</a></h5>
              <p class="card-text">${ad.description}</p>
             </div>
         </div>

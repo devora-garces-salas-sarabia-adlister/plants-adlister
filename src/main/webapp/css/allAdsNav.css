@@ -1,7 +1,15 @@
 nav{
     background-color: #f2e9e4;
+    max-width: 100%;
 }
 .text {
     color: #7a9e7e;
     font-family: 'Pathway Extreme', sans-serif;
+}
+
+/*.logout{*/
+/*    position: relative;*/
+/*}*/
+*{
+    max-width: 100%;
 }
