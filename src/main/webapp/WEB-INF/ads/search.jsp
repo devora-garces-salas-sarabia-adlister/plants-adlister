@@ -9,18 +9,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <jsp:include page="/WEB-INF/partials/head.jsp">
+  <jsp:include page="/WEB-INF/partials/headerForSearchAd.jsp">
     <jsp:param name="title" value="Search" />
   </jsp:include>
-  <link rel="stylesheet" href="/css/searchAd.css">
+
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/searchAdNavbar.jsp"/>
-<img src="/img/wateringCan.jpg" id="background-imgs">
+<img src="/img/wateringCan.jpg" class="backgroundimg">
 <c:forEach var="ad" items="${ad}">
-  <div class="container4">
-    <div class="container3">
-      <div class="col-md-6 container2">
+  <div class="container-4">
+    <div class="container-3">
+      <div class="col-md-6 container-2">
         <h5 class="card-title py-2"><a href="/ads/view?id=${ad.id}">${ad.title}</a></h5>
         <p class="card-text">${ad.description}</p>
       </div>

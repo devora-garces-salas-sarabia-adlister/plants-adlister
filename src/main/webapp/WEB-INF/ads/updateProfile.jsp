@@ -24,15 +24,16 @@
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input id="email" name="email" class="form-control" type="text" value="${user.email}" required>
+            <input id="email" name="email" class="form-control" type="email" value="${user.email}" required>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input id="password" name="password" class="form-control" type="password" value="${user.password}" required>
+            <input id="password" name="password" class="form-control" type="password">
         </div>
         <div class="form-group">
             <label for="confirm_password">Confirm Password</label>
-            <input id="confirm_password" name="confirm_password" class="form-control" type="password" type="hidden" value="${user.password}" required>
+            <input id="confirm_password" name="confirm_password" class="form-control" type="password" type="hidden">
+            <p>${passwordError}</p>
         </div>
         <input value="${user.id}" type="hidden" name="id">
         <input type="submit" class="btn btn-secondary btn-outline-light btn-block submit">
