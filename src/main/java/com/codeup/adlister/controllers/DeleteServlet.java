@@ -15,6 +15,6 @@ public class DeleteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Long id = Long.valueOf(request.getParameter("id"));
         DaoFactory.getAdsDao().deleteAdPost(id);
-        request.getRequestDispatcher("/WEB-INF/deletead.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/partials/deletead.jsp").forward(request, response);
     }
 }

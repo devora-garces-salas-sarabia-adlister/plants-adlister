@@ -8,34 +8,33 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/css/updateAd.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
-<div class="modal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Edit post</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form action="/updateAd" method="POST">
-                <div class="modal-body">
-                    <label for="title">Title</label>
-                    <input id="title" name="title" class="form-control" type="text" value="${ad.title}">
-                </div>
-                <div class="modal-body">
-                    <label for="description">Description</label>
-                    <input id="description" name="description" class="form-control" type="text"
-                           value="${ad.description}">
-                </div>
-                <input value="${ad.id}" type="hidden" name="id">
-                <div class="modal-footer">
-                    <a href="/profile" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
-                    <button type="submit" class="btn btn-primary">Make Edit</button>
-                </div>
-            </form>
+<img src="/img/meadow.jpg" id="background-img">
+<div class="container">
+    <h1>Edit post</h1>
+    <form action="/updateAd" method="POST">
+        <div>
+            <label for="title">Title</label>
+            <input id="title" name="title" class="form-control" type="text" value="${ad.title}">
         </div>
-    </div>
+        <div>
+            <label for="description">Description</label>
+            <input id="description" name="description" class="form-control" type="text"
+                   value="${ad.description}">
+        </div>
+        <input value="${ad.id}" type="hidden" name="id">
+        <div>
+            <button type="submit" class="btn btn-secondary btn-block submit btn-text btn-outline-light">Make Edit</button>
+            <button type="button" class="btn btn-secondary btn-block submit btn-text btn-outline-light" data-bs-dismiss="modal"><a href="/profile" class="text-light">Cancel</a></button>
+        </div>
+    </form>
+</div>
 </div>
 </body>
 </html>

@@ -5,6 +5,8 @@
     <jsp:include page="/WEB-INF/partials/head2.jsp">
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 <video id="background-video" autoplay loop muted >
@@ -13,10 +15,10 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <div class="row">
-            <h1 class="col-12 welcome-header">Welcome to the Plant-lister!</h1>
+            <h1 class="col-12 welcome-header">Welcome to the Plantlister!</h1>
             <div class="d-flex justify-content-center">
-            <button class="col-4 me-2 btn-yellow"><a href="/login">Login</a></button>
-            <button class="col-4 btn-yellow"><a href="/register">Sign-up</a></button>
+            <button class="col-4 me-2 btn-yellow"><a href="/login" class="text-decoration-none">Login</a></button>
+            <button class="col-4 btn-yellow"><a href="/register" class="text-decoration-none">Sign-up</a></button>
             </div>
         </div>
     </div>

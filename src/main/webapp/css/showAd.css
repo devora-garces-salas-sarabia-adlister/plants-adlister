@@ -1,5 +1,14 @@
-body {
-    background-color: #444b6e;
+
+#background-imgs {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 .card-box {
@@ -16,51 +25,37 @@ body {
     text-align: center;
     width: 75%;
     height: 30vh;
-    background-color: #9ab87a;
+
+    background-color: #495057;
 }
 h5{
     padding-top: 1em;
     padding-bottom: 0.5em;
 }
 h5>a{
-    color: #F8F991;
+    color: lavenderblush;
     font-family: 'Pathway Extreme', sans-serif;
     font-size: xx-large;
+    text-decoration: none;
 }
 .card-body{
     font-family: 'Pathway Extreme', sans-serif;
 }
 p{
-    color: #3D315B;
+    color: lavenderblush;
 }
 
-@media(max-width: 768px){
-    .card-body{
+@media(max-width: 768px) {
+    .card-body {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .card{
+    .card {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         width: 75%;
-        height: 70vh;
-    }
-    h5>a{
-        color: #F8F991;
-        font-family: 'Pathway Extreme', sans-serif;
-        font-size: xx-large;
-    }
-
-
-}
-@media(min-width: 769px){
-    .card{
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        font-size: small;
     }
 }
