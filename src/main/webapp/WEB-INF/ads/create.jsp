@@ -4,8 +4,10 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Create a new Ad" />
     </jsp:include>
+    <link rel="stylesheet" href="/css/createAd.css">
 </head>
 <body>
+<img src="/img/redflowers.jpg" id="background-img">
     <div class="container">
         <h1>Create a new Ad</h1>
         <form action="/ads/create" method="post">
@@ -17,7 +19,7 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
-            <input type="submit" class="btn btn-block btn-primary">
+            <input type="submit" class="btn btn-block btn-primary btn-outline-light">
         </form>
     </div>
 </body>
