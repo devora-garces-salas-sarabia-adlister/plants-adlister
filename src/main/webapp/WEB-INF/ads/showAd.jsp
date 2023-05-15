@@ -18,7 +18,7 @@
 <div class="container4">
     <div class="container3">
         <div class="container2">
-            <h5 class="card-title py-2"><a href="/ads/view?id=${ad.id}" >${ad.title}</a></h5>
+            <h5 class="card-title py-2 d-flex justify-content-center align-items-center"><a href="/ads/view?id=${ad.id}" >${ad.title}</a></h5>
             <p class="card-text">${ad.description}</p>
         </div>
     </div>
