@@ -32,3 +32,6 @@
     align-items: center;
     flex-wrap: wrap;
 }
+.name{
+    color: lavenderblush;
+}
