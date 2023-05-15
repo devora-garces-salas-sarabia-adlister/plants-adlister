@@ -1,7 +1,7 @@
 
 # **Plantlister**
 
-Plantlister is a full-stack website dedicated to plant enthusiasts, offering a platform to post listings with a wide variety of seeds, seedlings, plants, trees, and more. <br> This README document provides an overview of the project, its features, and the technologies used.
+Plantlister is a full-stack website dedicated to plant enthusiasts, offering a platform to buy and sell a wide variety of seeds, seedlings, plants, trees, and more. <br> This README document provides an overview of the project, its features, and the technologies used.
 
 ## **Features**
 
@@ -17,13 +17,14 @@ Plantlister was built using the following technologies:
 -HTML: HTML is used for structuring the website's content. <br>
 -CSS: CSS is used for styling the website and making it visually appealing. <br>
 -Bootstrap: Bootstrap is a CSS framework used for creating responsive and mobile websites. <br>
--MySQL: MySQL is used as the database management system to store and retrieve data efficiently.
+-MySQL: MySQL is used as the database management system to store and retrieve data efficiently. <br>
+-JavaScript: JavaScript is used for frontend interactivity and enhancing the user experience.
 
 ## **Installation and Setup**
 
 To run Plantlister locally, follow these steps:
 
-1. Clone the repository: git clone <br>
+1. Clone the repository: 'git clone https://github.com/devora-garces-salas-sarabia-adlister/plants-adlister.git' <br>
 2. Navigate to the project directory:  plantlister <br>
   -Set up the database: <br>
   -Create a MySQL database. <br>
