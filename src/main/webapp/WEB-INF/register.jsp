@@ -32,7 +32,7 @@
                 <input id="confirm_password" name="confirm_password" class="form-control" type="password" required>
             </div>
             <p>${passwordError}</p>
-            <input type="submit" class="btn btn-block btn-color">
+            <input type="submit" class="btn btn-block btn-color btn-outline-light">
         </form>
     </div>
 </body>

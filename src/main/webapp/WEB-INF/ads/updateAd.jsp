@@ -30,8 +30,8 @@
         </div>
         <input value="${ad.id}" type="hidden" name="id">
         <div>
-            <button type="submit" class="btn btn-secondary btn-block submit btn-text">Make Edit</button>
-            <button type="button" class="btn btn-secondary btn-block submit btn-text" data-bs-dismiss="modal"><a href="/profile">Cancel</a>></button>
+            <button type="submit" class="btn btn-secondary btn-block submit btn-text btn-outline-light">Make Edit</button>
+            <button type="button" class="btn btn-secondary btn-block submit btn-text btn-outline-light" data-bs-dismiss="modal"><a href="/profile" class="text-light">Cancel</a></button>
         </div>
     </form>
 </div>

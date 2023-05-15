@@ -13,17 +13,9 @@
         <jsp:param name="title" value="Search" />
     </jsp:include>
     <link rel="stylesheet" href="/css/showAd.css">
+    <%@include file="deleteAdNavbar.jsp"%>
 </head>
 <body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand text" href="/ads">Plantlister</a>
-        </div>
-        <button class="btn"><a href="/profile" class="text">Back to Profile</a></button>
-        <button class="btn"><a href="/logout" class="text">Logout</a></button>
-    </div>
-</nav>
 <h1>Ad was deleted</h1>
 </body>
 </html>

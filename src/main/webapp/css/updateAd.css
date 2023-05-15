@@ -26,6 +26,11 @@
     bottom: 0;
     z-index: -1;
 }
+
+.text-light{
+    text-decoration: none;
+}
+
 .submit {
     margin-top: 1em;
 }
