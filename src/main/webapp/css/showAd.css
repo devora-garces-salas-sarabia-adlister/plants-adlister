@@ -25,6 +25,7 @@
     text-align: center;
     width: 75%;
     height: 30vh;
+
     background-color: #495057;
 }
 h5{
@@ -50,7 +51,6 @@ p{
         justify-content: center;
         align-items: center;
     }
-
     .card {
         display: flex;
         justify-content: center;

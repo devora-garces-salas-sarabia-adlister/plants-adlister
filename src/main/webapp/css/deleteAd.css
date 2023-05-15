@@ -22,6 +22,8 @@
     text-align: center;
     display: inline-block;
     height: 250px;
+    border: red solid 2px;
+    overflow: hidden;
 }
 
 .container3{
@@ -36,3 +38,4 @@
     align-items: center;
     flex-wrap: wrap;
 }
+

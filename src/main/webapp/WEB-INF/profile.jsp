@@ -7,7 +7,7 @@
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/profilenavbar.jsp" />
+<jsp:include page="/WEB-INF/partials/profileNavbar.jsp" />
 <img src="/img/tree-bg.jpg" id="background-imgs">
 <div class="d-flex justify-content-center align-items-center">
     <div class="my-3">
@@ -24,6 +24,7 @@
                     <div class="container2">
                             <h5 class=""><a href="/ads/view?id=${ad.id}" class="text-decoration-none" >${ad.title}</a></h5>
                             <p class="">${ad.description}</p>
+
                             <button class="btn btn-secondary btn-block submit btn-outline-light"><a href="/delete?id=${ad.id}" class="text-light text-decoration-none">Delete</a></button>
                             <button class="btn btn-secondary btn-block submit btn-outline-light"><a href="/updateAd?id=${ad.id}" class="text-light text-decoration-none">Edit</a></button>
                     </div>

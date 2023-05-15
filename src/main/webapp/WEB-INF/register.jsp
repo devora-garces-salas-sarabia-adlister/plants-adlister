@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/register.css">
 </head>
 <body>
-    <jsp:include page="partials/registernavbar.jsp" />
+    <jsp:include page="partials/registerNavbar.jsp" />
     <img src="/img/white-tree.jpg" id="background-img-register">
     <div class="container">
         <h1>Please fill in your information.</h1>
