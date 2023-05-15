@@ -35,9 +35,9 @@
             <input id="confirm_password" name="confirm_password" class="form-control" type="password" type="hidden" value="${user.password}" required>
         </div>
         <input value="${user.id}" type="hidden" name="id">
-        <input type="submit" class="btn btn-secondary btn-block submit">
-        <button class="btn btn-secondary btn-block submit btn-text"><a href="/deleteUser?username=${user.username}">Delete User</a></button>
-        <button class="btn btn-secondary btn-block submit btn-text"><a href="/profile">Cancel</a></button>
+        <input type="submit" class="btn btn-secondary btn-outline-light btn-block submit">
+        <button class="btn btn-secondary btn-outline-light btn-block submit btn-text"><a href="/deleteUser?username=${user.username}">Delete User</a></button>
+        <button class="btn btn-secondary btn-outline-light btn-block submit btn-text"><a href="/profile">Cancel</a></button>
     </form>
 </div>
 </body>

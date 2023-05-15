@@ -16,7 +16,6 @@ public class UpdateProfileServlet extends HttpServlet {
         String username = request.getParameter("username");
 
         request.setAttribute("user", DaoFactory.getUsersDao().findByUsername(username));
-        System.out.println(username);
         request.getRequestDispatcher("/WEB-INF/ads/updateProfile.jsp").forward(request, response);
     }
 
@@ -27,9 +26,10 @@ public class UpdateProfileServlet extends HttpServlet {
         String confirmedPassword = request.getParameter("confirm_password");
         String email = request.getParameter("email");
 
+
         if (password.equals(confirmedPassword)) {
             DaoFactory.getUsersDao().updateUserProfile(id, username, password, email);
-            response.sendRedirect("/profile");
+            response.sendRedirect("/login");
         }else{
             response.sendRedirect("/updateProfile");
         }

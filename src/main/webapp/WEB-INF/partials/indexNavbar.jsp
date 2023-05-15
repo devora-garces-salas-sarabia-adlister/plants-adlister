@@ -17,9 +17,9 @@
       </div>
       <div class="mt-3">
         <label for="search"></label>
-        <form role="search" method="GET" action="/search" class="col-8 d-flex">
+        <form role="search" method="GET" action="/search" class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" name="search" id="search" aria-label="Search" required>
-          <button class="btn btn-sm btn-secondary" type="submit">Search</button>
+          <button class="btn btn-sm btn-secondary btn-outline-light" type="submit">Search</button>
         </form>
       </div>
       <button class="btn col-1"><a href="/profile" class="text">Back to Profile</a></button>

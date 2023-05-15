@@ -7,9 +7,10 @@ nav{
     font-family: 'Pathway Extreme', sans-serif;
 }
 
-/*.logout{*/
-/*    position: relative;*/
-/*}*/
+#search{
+    width: 75%;
+}
+
 *{
     max-width: 100%;
 }
