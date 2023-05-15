@@ -11,12 +11,12 @@
 
 <jsp:include page="/WEB-INF/partials/indexNavbar.jsp" />
 <img src="/img/smallpurple.jpg" id="background-imgs">
-<h1>Here Are all the ads!</h1>
+<h1>Here Are All The Plants!</h1>
 <div class="container4">
     <c:forEach var="ad" items="${ads}">
         <div class="container3">
             <div class="container2">
-             <h5 class="card-title"><a href="/ads/view?id=${ad.id}">${ad.title}</a></h5>
+             <h5 class="card-title mb-2"><a href="/ads/view?id=${ad.id}" class="text-decoration-none headerColor">${ad.title}</a></h5>
              <p class="card-text">${ad.description}</p>
             </div>
         </div>
