@@ -26,6 +26,16 @@
       </div>
     </div>
   </div>
+  <div class="btn-ctnr col-12 d-flex align-items-center justify-content-center">
+    <button class="btn btn-secondary btn-block submit btn-text btn-outline-light" id="buyItem">Buy Now!</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script>
+    $("#buyItem").click(function(){
+      alert("Thank you for your purchase!");
+    });
+  </script>
 </c:forEach>
 
 </body>
