@@ -76,12 +76,10 @@ public class MySQLUsersDao implements Users {
         );
     }
 
-    public void updateUserProfile(Long userId, String username, String password, String email){
+    public void updateUserProfile(Long userId, String username, String hash, String email){
         try{
             String sql = "UPDATE users SET username = ?, password = ?, email = ? WHERE id = ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
-
-            String hash = Password.hash(password);
 
             stmt.setString(1, username);
             stmt.setString(2, hash);
@@ -93,6 +91,24 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
+
+    public void updateUserProfile(Long userId, String username, String email){
+        try{
+            String sql = "UPDATE users SET username = ?, email = ? WHERE id = ?";
+            PreparedStatement stmt1 = connection.prepareStatement(sql);
+
+
+            stmt1.setString(1, username);
+            stmt1.setString(2, email);
+            stmt1.setLong(3, userId);
+
+            stmt1.execute();
+        }catch (SQLException e){
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
+
 
     public void deleteUserAcc(String username) {
         try {
